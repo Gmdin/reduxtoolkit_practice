@@ -1,10 +1,15 @@
 import React from 'react'
+import { fakeUserData } from '../api'
 
 const Adduser = () => {
+    const AddNewUser=()=>{
+      const payload=fakeUserData();
+      console.log(payload)
+    }
   return (
     <>
     <div>users list</div>
-    <button>Add new user</button>
+    <button onClick={AddNewUser}>Add new user</button>
     </>
   )
 }
