@@ -16,6 +16,13 @@ const userSclice=createSlice({
            return [];
         }
         
+    },
+    //if action is supposed to be handled by one reducer, use reducers,
+    //if action is supposed to be handled by multiple reducer, use extraReducers
+    extraReducers(builder){
+        builder.addCase(userSclice.actions.deleteUsers,()=>{
+            return [];
+        })
     }
 })
 
