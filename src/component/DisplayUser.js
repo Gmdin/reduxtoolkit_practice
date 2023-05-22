@@ -1,6 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeUser,deleteUsers } from '../store/slices/userSclice';
+import { removeUser } from '../store/slices/userSclice';
+import { deleteAllUsers } from '../store/actions';
+
 
 const DisplayUser = () => {
   const dispatch=useDispatch();
@@ -11,7 +13,7 @@ const DisplayUser = () => {
         return state.users;
     })
     const deleteAllUser=()=>{
-      dispatch(deleteUsers()); 
+      dispatch(deleteAllUsers()); 
     }
   return (
     <div>{data.map((current,id)=>(
